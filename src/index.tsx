@@ -6,6 +6,7 @@ import BreedSelectorForm3 from './components/BreedSelectorForm3';
 import DogImage from './components/DogImage';
 import RandomDogImage from './components/RandomDogImage';
 import RandomDogImages from './components/RandomDogImages';
+import { Todos } from './components/Todos/Todo';
 import { DogImageProvider } from './contexts/DogImageContext';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
             <h1>IT WORKS</h1>
             <p>Yeah boiii ii</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque fugit sequi est nesciunt quam quasi ad quia. Exercitationem, recusandae aut. Hic unde laboriosam nemo sint architecto, ea impedit suscipit soluta.</p>
+            <Todos />
             {/* <RandomDogImage /> */}
             {/* <RandomDogImages /> */}
             <DogImageProvider>

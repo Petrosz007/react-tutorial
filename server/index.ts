@@ -1,12 +1,13 @@
-import express from "express";
+import { Express } from "express";
 import nodeFetch from "node-fetch";
 import { Currency } from "./interfaces";
 import { initializeDatabase, Todo } from "./sequelize";
 
-const app = express();
+const app: Express = require("express")();
 const port = 4000;
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(require('cors')());
 
 app.get("/bitcoin", async (req, res) => {
     let currencies = await nodeFetch("https://blockchain.info/ticker");

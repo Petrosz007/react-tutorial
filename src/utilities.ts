@@ -3,8 +3,8 @@ import { useEffect } from "react";
 export const useEffectAsync = (f: () => Promise<void>, deps?: React.DependencyList) => 
     useEffect(() => {f()}, deps);
 
-export const fetchAs = async <T>(url: string): Promise<T> => {
-    const response = await fetch(url);
+export const fetchAs = async <T>(url: string, init?: RequestInit): Promise<T> => {
+    const response = await fetch(url, init);
     if(!response.ok) {
         throw new Error(`Response was not ok: ${response.status}: ${await response.text()}`);
     }
