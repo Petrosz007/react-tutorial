@@ -1,0 +1,12 @@
+.dog-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dog-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
